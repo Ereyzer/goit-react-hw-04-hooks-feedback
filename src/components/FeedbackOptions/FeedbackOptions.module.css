@@ -1,0 +1,14 @@
+.Button {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #b6aeaefd;
+
+  margin-left: 25px;
+
+  background-color: #fff;
+}
+
+/* .Button + .Button {
+    margin-left: ;
+} */
