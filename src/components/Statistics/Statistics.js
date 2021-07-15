@@ -10,7 +10,6 @@ export class Statistics extends React.Component {
     positivePercentage: PropTypes.number.isRequired,
   };
   render() {
-    console.log(this.props);
     const arrKeys = Object.keys(this.props);
     return (
       <ul>
