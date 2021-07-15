@@ -5,7 +5,7 @@ import { Section } from '../Section/Section';
 import { Notification } from '../Notification/Notification';
 
 export class App extends Component {
-  leaveFeedback = this.changeState.bind(this);
+  //   leaveFeedback = this.changeState.bind(this);
   openStatistic = false;
 
   state = {
@@ -14,13 +14,12 @@ export class App extends Component {
     bad: 0,
   };
 
-  changeState(option) {
-    // console.log(this)
+  changeState = option => {
     this.openStatistic = true;
     this.setState(prevState => {
       return { [option]: prevState[option] + 1 };
     });
-  }
+  };
 
   totalCount = ({ good, neutral, bad }) => good + neutral + bad;
 
@@ -36,7 +35,7 @@ export class App extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
-            leaveFeedback={this.leaveFeedback}
+            leaveFeedback={this.changeState}
           />
         </Section>
         <Section title="Statistics">

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import style from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 export class FeedbackOptions extends Component {
   options = this.props.options;
   leaveFeedback = this.props.leaveFeedback;
+
   render() {
     return (
       <>
@@ -23,3 +25,7 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
