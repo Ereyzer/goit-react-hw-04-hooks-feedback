@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Statistic } from '../Statistic/Statistic';
 
 export class Statistics extends React.Component {
   static propTypes = {
@@ -15,17 +16,7 @@ export class Statistics extends React.Component {
       <ul>
         {arrKeys.map(key => {
           console.log.apply(this.props[key]);
-          return (
-            <li key={key}>
-              <p>
-                {key}:{' '}
-                <span>
-                  {this.props[key]}
-                  {key === 'positivePercentage' && '%'}
-                </span>
-              </p>
-            </li>
-          );
+          return <Statistic key={key} text={key} item={this.props[key]} />;
         })}
       </ul>
     );
