@@ -2,7 +2,6 @@ import React from 'react';
 import { Statistic } from '../Statistic/Statistic';
 
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
-  console.log(good, neutral, bad, total, positivePercentage);
   return (
     <ul>
       <Statistic key="good" text="good" item={good} />
